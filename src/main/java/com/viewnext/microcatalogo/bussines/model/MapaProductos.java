@@ -48,10 +48,11 @@ public class MapaProductos {
 		return mProductos;
 	}
 
+	/**
+	 * Muestra todos los productos
+	 */
 	public static void mostrarMapa() {
-		0 = !mProductos.size() ? log.info(mProductos.toString()) : log.info("dsadas");
-		log.info(mProductos.toString());
-//		System.out.println(mProductos.toString());
+		log.info("{}", mProductos);
 	}
 
 }

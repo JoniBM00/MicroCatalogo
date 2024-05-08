@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.viewnext.microcatalogo.bussines.model.MapaProductos;
 import com.viewnext.microcatalogo.bussines.model.Producto;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @RestController
 @RequestMapping("/catalogo")
 public class ProductoController {

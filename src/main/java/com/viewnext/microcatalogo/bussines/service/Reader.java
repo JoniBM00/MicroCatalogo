@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.PathResource;
 
 import com.viewnext.microcatalogo.bussines.model.MapaProductos;
 import com.viewnext.microcatalogo.bussines.model.Producto;
@@ -28,7 +29,8 @@ public class Reader {
 	 */
 	public static void readCsv() throws IOException {
 		// Lee el primer fichero csv y lo mete en el mapa de MapaProductos
-		try (BufferedReader br = new BufferedReader(new FileReader("stockTerminales.csv"))) {
+		try (BufferedReader br = new BufferedReader(
+				new FileReader(new PathResource("./../ficheroEntrada/stockTerminales.csv").getFile()))) {
 			String line;
 			while ((line = br.readLine()) != null) {
 				String[] values = line.split(",");
@@ -44,7 +46,8 @@ public class Reader {
 		}
 		// Lee el segundo fichero csv, busca la id dentro del mapa y si lo encuentra usa
 		// la información de este csv para ponerlo en el producto encontrado
-		try (BufferedReader br = new BufferedReader(new FileReader("terminales.csv"))) {
+		try (BufferedReader br = new BufferedReader(
+				new FileReader(new PathResource("./../ficheroEntrada/stockTerminales.csv").getFile()))) {
 			String line;
 			while ((line = br.readLine()) != null) {
 				String[] values = line.split(",");

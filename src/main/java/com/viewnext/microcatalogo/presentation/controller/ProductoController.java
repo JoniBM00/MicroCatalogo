@@ -23,7 +23,7 @@ public class ProductoController {
 	 * 
 	 * @return Una lista de todos los productos
 	 */
-	@GetMapping("/get")
+	@GetMapping("/getAll")
 	public ResponseEntity<List<Producto>> getProductos() {
 		ArrayList<Producto> lProductos = new ArrayList<>(MapaProductos.getmProductos().values());
 		log.info("Mostrando los productos.");
